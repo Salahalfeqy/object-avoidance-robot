@@ -62,46 +62,45 @@ This project implements an autonomous mobile robotic vehicle driven by an Arduin
 ```mermaid
 graph TD
     subgraph Power["Power Supply"]
-        BAT[Battery Pack]
+        BAT["Battery Pack"]
     end
 
     subgraph Controller["Arduino UNO R3"]
-        A1[Pin A1 - Trig]
-        A2[Pin A2 - Echo]
-        D4[Pin 4 - Right Fwd]
-        D5[Pin 5 - Right Bwd]
-        D6[Pin 6 - Left Bwd]
-        D7[Pin 7 - Left Fwd]
-        D10[Pin 10 - Scan Servo]
-        D13[Pin 13 - Auxiliary Servo]
-        GND_ARD[GND]
-        VCC5[5V Output]
+        A1["Pin A1 - Trig"]
+        A2["Pin A2 - Echo"]
+        D4["Pin 4 - Right Fwd"]
+        D5["Pin 5 - Right Bwd"]
+        D6["Pin 6 - Left Bwd"]
+        D7["Pin 7 - Left Fwd"]
+        D10["Pin 10 - Scan Servo"]
+        D13["Pin 13 - Auxiliary Servo"]
+        GND_ARD["GND"]
+        VCC5["5V Output"]
     end
 
     subgraph Sensor["HC-SR04 Ultrasonic Sensor"]
-        US_VCC[VCC]
-        US_TRIG[Trig]
-        US_ECHO[Echo]
-        US_GND[GND]
+        US_VCC["VCC"]
+        US_TRIG["Trig"]
+        US_ECHO["Echo"]
+        US_GND["GND"]
     end
 
-    subgraph Servos["Actuators (Servos)"]
-        SRV1[Scan Servo - D10]
-        SRV2[Auxiliary Servo - D13]
+    subgraph Servos["Actuators Servos"]
+        SRV1["Scan Servo - D10"]
+        SRV2["Auxiliary Servo - D13"]
     end
 
     subgraph MotorDriver["L298N Dual H-Bridge Driver"]
-        IN1[IN1 - Right Fwd]
-        IN2[IN2 - Right Bwd]
-        IN3[IN3 - Left Bwd]
-        IN4[IN4 - Left Fwd]
-        PWR_IN[12V / Battery (+)]
-        M_GND[GND (Common)]
-        OUT12[OUT 1 & 2 -> Right Motors]
-        OUT34[OUT 3 & 4 -> Left Motors]
+        IN1["IN1 - Right Fwd"]
+        IN2["IN2 - Right Bwd"]
+        IN3["IN3 - Left Bwd"]
+        IN4["IN4 - Left Fwd"]
+        PWR_IN["12V / Battery Positive"]
+        M_GND["GND Common"]
+        OUT12["OUT 1 & 2 -> Right Motors"]
+        OUT34["OUT 3 & 4 -> Left Motors"]
     end
 
-    %% Wiring Connections
     BAT --> PWR_IN
     BAT --> GND_ARD
     M_GND --> GND_ARD
@@ -119,5 +118,7 @@ graph TD
     D6 --> IN3
     D7 --> IN4
 
-    IN1 & IN2 --> OUT12
-    IN3 & IN4 --> OUT34
+    IN1 --> OUT12
+    IN2 --> OUT12
+    IN3 --> OUT34
+    IN4 --> OUT34
