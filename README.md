@@ -17,8 +17,8 @@
 
 | Bottom View (Motors & Chassis) | Isometric View (Electronics & Sensor Mount) |
 | :---: | :---: |
-| <img width="1343" height="1369" alt="WhatsApp Image 2026-10-08 at 1 00 22 AM" src="https://github.com/user-attachments/assets/37361220-9be2-42cd-b246-faebbf84aeaf" />
-<img width="1204" height="1600" alt="WhatsApp Image 2026-10-08 at 1 00 21 AM (1)" src="https://github.com/user-attachments/assets/592ef4c1-5efd-4288-bfa4-baef89e7eebe" />
+| <img width="60" height="60" alt="WhatsApp Image 2026-10-08 at 1 00 22 AM" src="https://github.com/user-attachments/assets/37361220-9be2-42cd-b246-faebbf84aeaf" />
+<img width="60" height="60" alt="WhatsApp Image 2026-10-08 at 1 00 21 AM (1)" src="https://github.com/user-attachments/assets/592ef4c1-5efd-4288-bfa4-baef89e7eebe" />
  |
 
 > **Note:** Save the project images inside a `docs/` folder in your repository with the filenames `robot-bottom.jpg` and `robot-iso.jpg`.
